@@ -1,0 +1,3 @@
+# ParkingTime
+A simple program...bad style...somewhat complete....
+Converts Pennies into quarters,dimes, and nickels to get parkingtime.
