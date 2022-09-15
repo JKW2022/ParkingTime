@@ -1,41 +1,80 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package parkingtime;
 
-/**
- *
- * @author deez
- */
-import java.util.Scanner;
-public class ParkingTime {
-    /**
-     * @param args the command line arguments
-     */
-public static void main(String[] args) {
-//TODO Code application here
-        int numDimesObtained, numMaxParkingTime, numNickelsObtained, 
-            numPenniesGiven, numPenniesRemaining,
-            numPenniesUsed, numQuartersObtained;
-        Scanner scan = new Scanner(System.in);
-        System.out.print("\nEnter number of pennies given: ");
-        numPenniesGiven = scan.nextInt();
-        scan.nextLine();
-        numQuartersObtained = numPenniesGiven / 25;
-        numPenniesRemaining = numPenniesGiven % 25;
-        numDimesObtained = numPenniesRemaining / 10; 
-        numPenniesRemaining %= 10;
-        numNickelsObtained = numPenniesRemaining / 5;
-        numPenniesRemaining %= 5;
-        System.out.println("\nnumPenniesGiven = " + numPenniesGiven +
-                           ", \nnumPenniesConverted = " +
-                          (numPenniesGiven - numPenniesRemaining));
-        System.out.println("\nnumQuartersObtained = " + numQuartersObtained +
-                           ", \nnumDimesObtained = " + numDimesObtained + 
-                           ", \nnumNickelsObtained = " + numNickelsObtained);
-        
-    
-    }
-    
+package parkingtime;
+{ public static void main(String[] args) 
+ { Scanner scan = new Scanner(System.in);
+   int numQuartersObtained, numDimesObtained, numNickelsObtained,
+       numPenniesGiven, numPenniesRemaining, numPenniesUsed, 
+       numMaxParkingTime;
+   //First run of the program
+   System.out.print("\nEnter number of pennies given (>= 0): ");
+   numPenniesGiven = scan.nextInt();
+   scan.nextLine();
+   numQuartersObtained = numPenniesGiven / 25;
+   numPenniesRemaining = numPenniesGiven % 25;
+   numDimesObtained = numPenniesRemaining / 10; 
+   numPenniesRemaining %= 10;
+   numNickelsObtained = numPenniesRemaining / 5;
+   numPenniesRemaining %= 5;
+   numPenniesUsed = numPenniesGiven - numPenniesRemaining;
+   numMaxParkingTime = numQuartersObtained * 30 + numDimesObtained * 11
+                        + numNickelsObtained * 5;
+   System.out.println("#(pennies used) =  " + numQuartersObtained 
+                      + "x25 + " + numDimesObtained 
+                      + "x10 + " + numNickelsObtained
+                      + "x5 = " + numPenniesUsed);
+   System.out.println("Max. #(parking minutes) =  " + numQuartersObtained 
+                      + "x30 + " + numDimesObtained 
+                      + "x11 + " + numNickelsObtained
+                      + "x5 = " + numMaxParkingTime
+                      + " (using " + numPenniesUsed + " pennies out of " 
+                      + numPenniesGiven + ")" );
+  
+   //Processing 2nd numPenniesGiven
+   System.out.print("\nEnter number of pennies given (>= 0): ");
+   numPenniesGiven = scan.nextInt();
+   scan.nextLine();
+   numQuartersObtained = numPenniesGiven / 25;
+   numPenniesRemaining = numPenniesGiven % 25;
+   numDimesObtained = numPenniesRemaining / 10; 
+   numPenniesRemaining %= 10;
+   numNickelsObtained = numPenniesRemaining / 5;
+   numPenniesRemaining %= 5;
+   numPenniesUsed = numPenniesGiven - numPenniesRemaining;
+   numMaxParkingMinutes = numQuartersObtained * 30 + numDimesObtained * 11
+                        + numNickelsObtained * 5;
+   System.out.println("#(pennies used) =  " + numQuartersObtained 
+                      + "x25 + " + numDimesObtained 
+                      + "x10 + " + numNickelsObtained
+                      + "x5 = " + numPenniesUsed);
+   System.out.println("Max. #(parking minutes) =  " + numQuartersObtained 
+                      + "x30 + " + numDimesObtained 
+                      + "x11 + " + numNickelsObtained
+                      + "x5 = " + numMaxParkingMinutes
+                      + " (using " + numPenniesUsed + " pennies out of " 
+                      + numPenniesGiven + ")" );
+   
+   //Processing 3rd numPenniesGiven
+   System.out.print("\nEnter number of pennies given (>= 0): ");
+   numPenniesGiven = scan.nextInt();
+   scan.nextLine();
+   numQuartersObtained = numPenniesGiven / 25;
+   numPenniesRemaining = numPenniesGiven % 25;
+   numDimesObtained = numPenniesRemaining / 10; 
+   numPenniesRemaining %= 10;
+   numNickelsObtained = numPenniesRemaining / 5;
+   numPenniesRemaining %= 5;
+   numPenniesUsed = numPenniesGiven - numPenniesRemaining;
+   numMaxParkingTime = numQuartersObtained * 30 + numDimesObtained * 11
+                        + numNickelsObtained * 5;
+   System.out.println("#(pennies used) =  " + numQuartersObtained 
+                      + "x25 + " + numDimesObtained 
+                      + "x10 + " + numNickelsObtained
+                      + "x5 = " + numPenniesUsed);
+   System.out.println("Max. #(parking minutes) =  " + numQuartersObtained 
+                      + "x30 + " + numDimesObtained 
+                      + "x11 + " + numNickelsObtained
+                      + "x5 = " + numMaxParkingTime
+                      + " (using " + numPenniesUsed + " pennies out of " 
+                      + numPenniesGiven + ")" );
+ }   
 }
